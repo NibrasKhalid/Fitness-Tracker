@@ -1,0 +1,141 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+    background-color: #F1FAEE;
+    overflow-x: hidden;
+}
+h1,h2,h3,h4,h5,h6,th{
+    font-family: "Poppins", sans-serif;
+}
+p,a,li,td,figcaption,span{
+    font-family: "Roboto", sans-serif;
+    font-size: 1.2em;
+    text-decoration: none;
+}
+
+/** Header **/
+header {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 175px;
+    background-color: rgba(29, 53, 87, 0);
+    z-index: 9999;
+    transition: all .25s linear;
+}
+header div {
+    width: auto;
+    height: 100%;
+    flex-grow: 1;
+}
+header div img{
+    width: auto;
+    height: 100%;
+}
+header nav menu {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+header nav menu li {
+    padding: 0 10px;
+}
+header nav menu li a {
+    color: #F1FAEE;
+}
+
+
+/** Masthead **/
+.lesson-masthead {
+    height: 100vh;
+    background-image: url("../img/masthead.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+.masthead-overlay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+.lesson-masthead div h1 {
+    font-size: 4em;
+    color: #F1FAEE;
+    text-shadow: #63a1f8 1px 0 10px;
+    letter-spacing: 2px;
+}
+.masthead-rectangle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto; 
+    height: auto;
+    background: rgba(0, 0, 0, 0.7); 
+    border-radius: 15px;
+    padding: 15px 30px; 
+    box-shadow: #63a1f8 1px 0 10px;
+}
+.icon-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.icon-container img{
+    display: flex;
+    justify-content: center;
+
+}
+.icon-container p {
+    font-size: 1em;
+    color: #F1FAEE;
+    text-align: center;
+}
+
+/** Main **/
+main {
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-start;
+    gap: 2rem; 
+    padding: 20px;
+}
+#sec1, #sec2 {
+    text-align: center;
+    padding: 5%;
+    width: 45%;
+}
+
+/* Animation for sliding right */
+.slide-right {
+    position: relative;
+    transform: translateX(-150px);
+    opacity: 0;
+    transition: all .5s ease;
+}
+.slide-right.active {
+    transform: translateX(0px);
+    opacity: 1;
+}
+
+/* Animation for sliding left */
+.slide-left {
+    position: relative;
+    transform: translateX(150px); 
+    opacity: 0; 
+    transition: all 0.5s ease;
+}
+
+.slide-left.active {
+    transform: translateX(0); 
+    opacity: 1; 
+}
